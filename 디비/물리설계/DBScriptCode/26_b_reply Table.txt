@@ -3,8 +3,8 @@ create table b_reply(
   b_no varchar(30) not null,
   m_no varchar(30) not null,
   b_r_content varchar(4000) not null,
-  b_r_register timestamp not null default now(),
-  b_r_modify timestamp not null default now(),
+  b_r_register timestamp default current_timestamp not null,
+  b_r_modify timestamp default current_timestamp not null,
   constraint pk_b_reply_b_r_no primary key(b_r_no),
   constraint fk_b_reply_b_no foreign key(b_no) references board(b_no) on delete cascade,
   constraint fk_b_reply_m_no foreign key(m_no) references member(m_no) on delete cascade

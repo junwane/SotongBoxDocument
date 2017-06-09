@@ -1,7 +1,7 @@
 create table c_course(
   c_no varchar(30) not null,
   m_no varchar(30) not null,
-  c_cou_schedule integer not null default 0,
+  c_cou_schedule integer  default 0 not null,
   constraint fk_c_course_c_no foreign key(c_no) references class(c_no) on delete cascade,
   constraint fk_c_course_m_no foreign key(m_no) references member(m_no) on delete cascade,
   constraint pk_c_course_c_no primary key(c_no,m_no)

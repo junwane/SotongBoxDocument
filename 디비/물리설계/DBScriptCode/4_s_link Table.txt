@@ -2,7 +2,7 @@
   m_no varchar(30) not null,
   s_no varchar(30) not null,
   s_l_id varchar(100) not null,
-  s_l_activity boolean not null default true,
+  s_l_activity integer default 1 not null,
   constraint fk_s_link_m_no foreign key(m_no) references member(m_no) on delete cascade,
   constraint fk_s_link_s_no foreign key(s_no) references sns(s_no),
   constraint pk_s_link_m_no primary key(m_no, s_no)

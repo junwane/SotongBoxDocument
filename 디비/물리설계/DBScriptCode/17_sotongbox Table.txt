@@ -5,8 +5,8 @@ create table sotongbox(
   sb_name varchar(60) not null,
   sb_img varchar(255) not null,
   sb_open varchar(10) not null,
-  sb_register timestamp not null default now(),
-  sb_modify  timestamp not null default now(),
+  sb_register timestamp default current_timestamp not null,
+  sb_modify  timestamp default current_timestamp not null,
   constraint pk_sotongbox_sb_no primary key(sb_no),
   constraint fk_sotongbox_cate_no foreign key(cate_no) references category(cate_no) on delete cascade,
   constraint fk_sotongbox_m_no foreign key(m_no) references member(m_no) on delete cascade

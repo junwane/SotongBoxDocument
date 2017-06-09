@@ -2,8 +2,8 @@ create table board(
   b_no varchar(30) not null,
   b_title varchar(60) null,
   b_content varchar(4000) null,
-  b_register timestamp not null default now(),
-  b_modify timestamp not null  default now(),
-  b_index time null,
+  b_register timestamp default current_timestamp not null,
+  b_modify timestamp default current_timestamp not null,
+  b_index varchar(10) null,
   constraint pk_board_b_no primary key(b_no)
 );

@@ -1,9 +1,9 @@
 create table note(
   note_send varchar(30) not null,
   note_accept varchar(30) not null,
-  note_date timestamp not null default now(),
+  note_date timestamp default current_timestamp not null,
   note_content varchar(4000) not null,
-  note_check boolean not null default false,
+  note_check integer default 0 not null,
   constraint fk_note_note_send foreign key(note_send) references member(m_no) on delete cascade,
   constraint fk_note_note_accept foreign key(note_accept) references member(m_no) on delete cascade,
   constraint pk_note_note_send primary key(note_send,note_accept,note_date)
