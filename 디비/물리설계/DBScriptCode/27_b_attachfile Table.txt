@@ -1,0 +1,7 @@
+create table b_attachfile(
+  b_no varchar(30) null,
+  b_r_no varchar(30) null,
+  b_a_file varchar(255) not null,
+  constraint fk_b_attachfile_b_no foreign key(b_no) references board(b_no) on delete cascade,
+  constraint fk_b_attachfile_b_r_no foreign key(b_r_no) references b_reply(b_r_no) on delete cascade
+);

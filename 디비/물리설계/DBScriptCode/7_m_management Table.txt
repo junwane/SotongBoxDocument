@@ -1,0 +1,8 @@
+create table m_management(
+  m_ma_send varchar(30) not null,
+  m_ma_accept varchar(30) not null,
+  m_ma_division varchar(10) not null,
+  constraint fk_m_management_m_ma_send foreign key(m_ma_send) references member(m_no) on delete cascade,
+  constraint fk_m_management_m_ma_accept foreign key(m_ma_accept) references member(m_no) on delete cascade,
+  constraint pk_m_management_m_ma_send primary key(m_ma_send, m_ma_accept, m_ma_division)
+);

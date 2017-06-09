@@ -1,0 +1,11 @@
+create table notice(
+  msg_no varchar(30) not null,
+  noti_send varchar(30) not null,
+  noti_accept varchar(30) not null,
+  noti_date timestamp not null default now(),
+  noti_check boolean not null default false,
+  constraint fk_notice_msg_no foreign key(msg_no) references message(msg_no),
+  constraint fk_notice_noti_send foreign key(noti_send) references member(m_no) on delete cascade,
+  constraint fk_notice_noti_accept foreign key(noti_accept) references member(m_no) on delete cascade,
+  constraint pk_notice_msg_no primary key(msg_no,noti_send,noti_accept,noti_date)
+);

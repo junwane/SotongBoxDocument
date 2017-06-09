@@ -1,0 +1,18 @@
+ create table member(
+  m_no varchar(30) not null,
+  username varchar(60) not null,
+  password varchar(255) not null,
+  m_sort varchar(255) not null,
+  m_nickname varchar(20) null,
+  m_img varchar(255) null,
+  m_level integer not null default 1,
+  m_introduce varchar(4000) null,
+  m_address varchar(255) null,
+  m_langage varchar(30) null,
+  m_nation varchar(30) null,
+  m_gender varchar(10) null,
+  m_state boolean not null default true,
+  m_register timestamp not null default now(),
+  m_comfirm boolean not null default false,
+  constraint pk_member_m_no primary key(m_no)
+);

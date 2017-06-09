@@ -1,0 +1,7 @@
+create table sc_attachfile(
+  sc_no varchar(30) null,
+  sc_r_no varchar(30) null,
+  sc_a_file varchar(255) not null,
+  constraint fk_sc_attachfile_sc_no foreign key(sc_no) references sotongcard(sc_no) on delete cascade,
+  constraint fk_sc_attachfile_sc_r_no foreign key(sc_r_no) references sc_reply(sc_r_no) on delete cascade
+);

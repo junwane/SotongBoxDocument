@@ -1,0 +1,11 @@
+create table b_write(
+  m_no varchar(30) not null,
+  c_no varchar(30) not null,
+  b_me_no varchar(30) not null,
+  b_no varchar(30) not null,
+  constraint fk_b_write_m_no foreign key(m_no) references member(m_no) on delete cascade,
+  constraint fk_b_write_c_no foreign key(c_no) references class(c_no) on delete cascade,
+  constraint fk_b_write_b_me_no foreign key(b_me_no) references b_menu(b_me_no) on delete cascade,
+  constraint fk_b_write_b_no foreign key(b_no) references board(b_no) on delete cascade,
+  constraint pk_b_write_m_no primary key(m_no,c_no,b_no,b_me_no)
+);

@@ -1,0 +1,8 @@
+create table sb_subscribe(
+  m_no varchar(30) not null,
+  sb_no varchar(30) not null,
+  sb_s_check boolean not null default false,
+  constraint fk_sb_subscribe_m_no foreign key(m_no) references member(m_no) on delete cascade,
+  constraint fk_sb_subscribe_sb_no foreign key(sb_no) references sotongbox(sb_no) on delete cascade,
+  constraint pk_sb_subscribe_m_no primary key(m_no,sb_no,sb_s_check)
+);

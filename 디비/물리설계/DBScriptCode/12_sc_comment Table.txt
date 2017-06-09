@@ -1,0 +1,8 @@
+create table sc_comment(
+  sc_no varchar(30) not null,
+  m_no varchar(30) not null,
+  sc_co_division varchar(10) not null,
+  constraint fk_sc_comment_sc_no foreign key(sc_no) references sotongcard(sc_no) on delete cascade,
+  constraint fk_sc_comment_m_no foreign key(m_no) references member(m_no) on delete cascade,
+  constraint pk_sc_comment_sc_no primary key(sc_no,m_no,sc_co_division)
+);

@@ -1,0 +1,10 @@
+create table c_pay(
+  c_p_no varchar(30) not null,
+  m_no varchar(30) not null,
+  c_no varchar(30) not null,
+  c_p_division varchar(20) not null,
+  c_p_date timestamp not null default now(),
+  constraint pk_c_pay_c_p_no primary key(c_p_no),
+  constraint fk_c_pay_m_no foreign key(m_no) references member(m_no) on delete cascade,
+  constraint fk_c_pay_c_no foreign key(c_no) references class(c_no) on delete cascade
+);

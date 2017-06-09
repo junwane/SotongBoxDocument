@@ -1,0 +1,6 @@
+create table category(
+  cate_no varchar(30) not null,
+  cate_name varchar(50) not null,
+  cate_img varchar(255) not null,
+  constraint pk_category_cate_no primary key(cate_no)
+);

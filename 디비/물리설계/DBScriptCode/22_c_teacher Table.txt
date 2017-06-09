@@ -1,0 +1,8 @@
+create table c_teacher(
+  m_no varchar(30) not null,
+  c_no varchar(30) not null,
+  c_t_check boolean not null default false,
+  constraint fk_c_teacher_m_no foreign key(m_no) references member(m_no) on delete cascade,
+  constraint fk_c_teacher_c_no foreign key(c_no) references class(c_no) on delete cascade,
+  constraint pk_c_teacher_m_no primary key(m_no,c_no)
+);

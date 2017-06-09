@@ -1,0 +1,5 @@
+create table b_menu(
+  b_me_no varchar(30) not null,
+  b_me_name varchar(60) not null,
+  constraint pk_b_menu_b_me_no primary key(b_me_no)
+);

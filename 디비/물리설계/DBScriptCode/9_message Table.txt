@@ -1,0 +1,5 @@
+create table message(
+  msg_no varchar(30) not null,
+  msg_content varchar(200) not null,
+  constraint pk_message_msg_no primary key(msg_no)
+);

@@ -1,0 +1,6 @@
+create table point(
+  m_no varchar(30) not null,
+  p_point integer not null,
+  p_date timestamp not null default now(),
+  constraint fk_point_m_no foreign key(m_no) references member(m_no) on delete cascade
+);

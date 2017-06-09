@@ -1,0 +1,11 @@
+create table sc_reply(
+  sc_r_no varchar(30) not null,
+  sc_no varchar(30) not null,
+  m_no varchar(30) not null,
+  sc_r_content varchar(4000) not null,
+  sc_r_register timestamp not null default now(),
+  sc_r_modify timestamp not null default now(),
+  constraint pk_sc_reply_sc_r_no primary key(sc_r_no),
+  constraint fk_sc_reply_sc_no foreign key(sc_no) references sotongcard(sc_no) on delete cascade,
+  constraint fk_sc_reply_m_no foreign key(m_no) references member(m_no) on delete cascade
+);

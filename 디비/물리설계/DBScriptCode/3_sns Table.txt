@@ -1,0 +1,5 @@
+﻿create table sns(
+  s_no varchar(30),
+  s_name varchar(50) not null,
+  constraint pk_sns_s_no primary key(s_no)
+);

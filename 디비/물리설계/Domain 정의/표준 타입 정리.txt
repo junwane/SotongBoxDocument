@@ -1,0 +1,48 @@
+CHAEACTER(n)		: Character string. Fixed-length n
+                   		: Character 문자열. 고정 길이 n
+
+VARCHAR(n) or 		: Character String. Variable length. MaxImum length n
+CHARACTER VARYING(n) 	: Character 문자열.  가변 길이 최고 길이 n
+
+BINART(n)		: Binary String. Fixed-length n
+			:  2진 문자열. 고정 길이 n
+
+BOOLEAN		: Stores TRUE or FALSE values
+			: 저장 참 또는 거짓 값
+
+VARBINARY(n) or		: Binary string. Variable length. Maximum length n
+BINARY VARYING(n)	: 2진 문자열. 가변 길이 최고 길이 n
+
+INTEGER(p)		: Integer numerical (no decimal). Precision p
+			: 정수 수의( no 십진법의) 정확성 p
+
+SMALLINT		: Integer numerical (no decimal). Precision 5
+			: 정수 수의( no 십진법의) 정확성 5
+
+INTEGER			: Integer numerical (no decimal). Precision 10
+			: 정수 수의( no 십진법의) 정확성 10
+
+BIGINT			: Integer numerical (no decimal). Precision 19
+			: 정수 수의( no 십진법의) 정확성 19
+
+DATE			: Stores year, month and day values
+			: 저장 년, 월 그리고 일의 값
+
+TIME			: Stores hour, minute and second values
+			: 저장 시 , 분 그리고 초의 값
+
+TIMESTAMP		: Stores year, month, day, hour, minute and second values
+			: 저장 연, 월, 일, 시, 분 그리고 초의 값
+
+INTERVAL			: Composed of a number of integer fields, representing a period of time
+                                        depending on the type of interval
+			: 간격의 유형에 따른 시간주기를 나타내는 여러 정수 필드로 구성
+
+ARRAY			: A set-length and ordered collection of eleements
+			: 엘리먼트의 집합 길이와 정렬된 모음
+
+MULTISET			: A variable-length and unordered collection of elements
+			: 가변 길이 그리고 순서가 없는 요소  모음
+
+XML			: Stores XML data
+			: 저장 XML 데이터

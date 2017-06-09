@@ -1,0 +1,7 @@
+create table cate_choice(
+ cate_no varchar(30) not null,
+ m_no varchar(30) not null,
+ constraint fk_cate_choice_cate_no foreign key(cate_no) references category(cate_no),
+ constraint fk_cate_choice_m_no foreign key(m_no) references member(m_no) on delete cascade,
+ constraint pk_cate_choice_cate_no primary key(cate_no,m_no)
+);
