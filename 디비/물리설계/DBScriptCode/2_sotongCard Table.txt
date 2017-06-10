@@ -1,6 +1,7 @@
 create table sotongCard(
   sc_no varchar(30) not null,
   m_no varchar(30)  not null,
+  sb_no varchar(30) not null,
   sc_title varchar(60) not null,
   sc_content varchar(4000) not null,
   sc_register timestamp default current_timestamp not null,
@@ -8,6 +9,8 @@ create table sotongCard(
   sc_thumbnail varchar(255) not null,
   constraint pk_sotongCard_sc_no primary key(sc_no),
   constraint fk_sotongCard_m_no foreign key(m_no) references member(m_no)
+  on delete cascade,
+  constraint fk_sotongCard_sb_no foreign key(sb_no) references sotongbox(sb_no)
   on delete cascade
 );
 
