@@ -4,6 +4,8 @@ create table notice(
   noti_accept varchar(30) not null,
   noti_date timestamp default current_timestamp not null,
   noti_check integer default 0 not null,
+  noti_value1 varchar(60)default ' ' not null ,
+  noti_value2 varchar(60) default ' ',
   constraint fk_notice_msg_no foreign key(msg_no) references message(msg_no),
   constraint fk_notice_noti_send foreign key(noti_send) references member(m_no) on delete cascade,
   constraint fk_notice_noti_accept foreign key(noti_accept) references member(m_no) on delete cascade,
